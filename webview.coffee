@@ -33,3 +33,8 @@ module.exports = class Webview extends ScrollComponent
           height="#{@page.height / 2}"
         </iframe>
       """
+
+  @define "url",
+    get: -> @_url
+    set: (value) ->
+      @_url = value
