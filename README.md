@@ -12,7 +12,7 @@ $ npm install --save peteschaffner/framer-webview
 
 app.js:
 ```javascript
-WebView = require("framer-webview")
+WebView = require('framer-webview')
 
 webview = new WebView({
   url: 'https:google.com/design'
