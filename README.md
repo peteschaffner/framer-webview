@@ -24,10 +24,10 @@ var webview = new Webview({
 ```
 ## API
 
-### `Webview#url <string>`
+### Webview#url <string>
 Web page you would like to render. Defaults to `'https://google.com/design'`
 
-### `Webview#contentHeight <number>`
+### Webview#contentHeight <number>
 The height of the web view’s content. This, together with the `height`, will
 effect the vertical scroll.
 
