@@ -3,7 +3,7 @@
 
 A simple web view for your prototyping pleasure.
 
-![Screenshot](preview.gif)
+<img src="preview.gif" alt="Screenshot" width="398">
 
 ## Usage
 ```shell
