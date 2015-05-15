@@ -3,20 +3,35 @@
 
 A simple web view for your prototyping pleasure.
 
+![Screenshot](preview.gif)
+
 ## Usage
 ```shell
-$ git clone https://github.com/peteschaffner/framercli.git myProject
+$ framer myProject &
 $ cd myProject
 $ npm install --save peteschaffner/framer-webview
 ```
 
-app.js:
+index.js:
 ```javascript
-WebView = require('framer-webview')
+var Webview = require('framer-webview')
 
-webview = new WebView({
+var webview = new Webview({
   url: 'https:google.com/design'
   width: Screen.width,
   height: Screen.height
 })
 ```
+## API
+
+### `Webview#url <string>`
+Web page you would like to render. Defaults to `'https://google.com/design'`
+
+### `Webview#contentHeight <number>`
+The height of the web view’s content. This, together with the `height`, will
+effect the vertical scroll.
+
+**NOTE:** To get the appropriate `contentHeight` for the given `url` open said
+`url` in Chrome, emulate your target device, and run
+`document.body.offsetHeight` in the console. The output should be your
+`contentHeight` value.
