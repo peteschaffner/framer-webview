@@ -49,15 +49,15 @@
   </head>
   <body>
     <script src="http://builds.framerjs.com/latest/framer.js"></script>
-    <script src="bundle.js"></script>
+    <script src=".bundle.js"></script>
 
     <script>
 
-      var WebView = require('framer-webview')
+      var WebView = require('./index.js')
 
       Framer.Device = new Framer.DeviceComponent({
         deviceType: 'iphone-6-silver',
-        deviceScale: 0.5
+        // deviceScale: 0.5
       })
       Framer.Device.setupContext()
       // Make all dimensions relative points (i.e. @1x)
@@ -65,7 +65,7 @@
       Framer.Device.content.width = Screen.width / Framer.Device.contentScale
       Framer.Device.content.height = Screen.height / Framer.Device.contentScale
 
-      new WebView({
+      webview = new WebView({
         width: Screen.width,
         height: Screen.height
       })
