@@ -5,6 +5,6 @@ node_modules: package.json
 	npm install
 
 clean:
-	rm -rf node_modules
+	rm -rf .bundle.js node_modules
 
 .PHONY: clean
