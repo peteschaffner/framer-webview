@@ -24,34 +24,41 @@ module.exports = class WebView extends ScrollComponent {
     }))
 
 
-    this.webview = new Layer({
+    this._page = new Layer({
       superLayer: this.content,
       width: this.width,
       height: opts.contentHeight,
       backgroundColor: opts.backgroundColor
     })
 
-    this.webview.html = `<iframe
-                      src="${opts.url}"
-                      width="${this.width}"
-                      height="${opts.contentHeight}"
-                    </iframe>`
+    this._page.html = `<iframe
+                         src="${opts.url}"
+                         width="${this.width}"
+                         height="${opts.contentHeight}">
+                       </iframe>`
 
-    this.url = opts.url
-    this.contentHeight = opts.contentHeight
+    this._url = opts.url
+    this._contentHeight = opts.contentHeight
+    this._iframe = this.querySelector('iframe')
+
+    // update _page and _iframe `height` accordingly
+    this.on('change:width', () => {
+      this._page.width = this.width
+      this._iframe.width = this.width
+    })
   }
 
   get url() { return this._url }
   set url(value) {
     this._url = value
-    this.querySelector('iframe').src = value
+    this._iframe.src = value
   }
 
   get contentHeight() { return this._contentHeight }
   set contentHeight(value) {
     this._contentHeight = value
-    this.querySelector('iframe').height = value
-    this.webview.height = value
+    this._iframe.height = value
+    this._page.height = value
     this.updateContent()
   }
 }
