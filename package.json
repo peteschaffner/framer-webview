@@ -16,10 +16,5 @@
   "keywords": [
     "prototyping",
     "framerjs"
-  ],
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  }
+  ]
 }

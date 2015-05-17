@@ -53,11 +53,10 @@
 
     <script>
 
-      var WebView = require('./index.js')
+      var WebView = require('.')
 
       Framer.Device = new Framer.DeviceComponent({
-        deviceType: 'iphone-6-silver',
-        // deviceScale: 0.5
+        deviceType: 'iphone-6-silver'
       })
       Framer.Device.setupContext()
       // Make all dimensions relative points (i.e. @1x)
