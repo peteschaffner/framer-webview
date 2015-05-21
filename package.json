@@ -1,20 +1,26 @@
 {
   "name": "framer-webview",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Web view module for Framer.js",
-  "main": "index.js",
-  "author": "pjschaffner@gmail.com",
-  "repository": "peteschaffner/framer-webview",
+  "author": {
+    "name": "Pete Schaffner",
+    "email": "pjschaffner@gmail.com"
+  },
   "license": "MIT",
-  "devDependencies": {
-    "babelify": "^6.0.2",
-    "framer-cli": "peteschaffner/framer-cli"
-  },
-  "scripts": {
-    "start": "framer --module"
-  },
   "keywords": [
     "prototyping",
     "framerjs"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/peteschaffner/framer-webview.git"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "framer-cli": "^0.1.0"
+  },
+  "scripts": {
+    "start": "framer preview"
+  },
+  "framer": { "type": "module" }
 }
